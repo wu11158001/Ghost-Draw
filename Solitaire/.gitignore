@@ -73,6 +73,6 @@ crashlytics-build.properties
 
 # My Fild
 Protobuf/
-Bowling/Bundles
-Bowling/HybridCLRData
-Bowling/yoo
+Bundles
+HybridCLRData
+yoo

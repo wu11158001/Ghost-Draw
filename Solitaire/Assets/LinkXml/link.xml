@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="Assembly-CSharp" preserve="all">
+  </assembly>
+  <assembly fullname="mscorlib" preserve="all">
+    <type fullname="System.Runtime.CompilerServices.AsyncVoidMethodBuilder" preserve="all"/>
+  </assembly>
+  <assembly fullname="UnityEngine">
+    <type fullname="UnityEngine.MeshCollider" preserve="all"/>
+    <type fullname="UnityEngine.Renderer" preserve="all"/>
+    <type fullname="UnityEngine.RenderSettings" preserve="all"/>
+    <type fullname="UnityEngine.Animation" preserve="all"/>
+    <type fullname="UnityEngine.SphereCollider" preserve="all"/>
+    <type fullname="UnityEngine.Rigidbody" preserve="all"/>
+    <type fullname="UnityEngine.SphereCollider" preserve="all"/>
+    <type fullname="UnityEngine.Event.UnityAction" preserve="all"/>
+    <type fullname="UnityEngine.Event.EventSystems" preserve="all"/>
+  </assembly>
+</linker>

@@ -22,9 +22,9 @@ public class LoginView : BaseView
             if (status == SignInStatus.Success)
             {
                 googleid = PlayGamesPlatform.Instance.GetUserId();
-                PlayerPrefs.SetString("GhostDraw_UserId", googleid);
-                PlayerPrefs.SetString("GhostDraw_NickName", PlayGamesPlatform.Instance.GetUserDisplayName());
-                PlayerPrefs.SetString("GhostDraw_ImgUrl", PlayGamesPlatform.Instance.GetUserImageUrl());
+                PlayerPrefs.SetString(LauncherManager.Instance.LocalData_UserID, googleid);
+                PlayerPrefs.SetString(LauncherManager.Instance.LocalData_NickName, PlayGamesPlatform.Instance.GetUserDisplayName());
+                PlayerPrefs.SetString(LauncherManager.Instance.LocalData_ImgUrl, PlayGamesPlatform.Instance.GetUserImageUrl());
 
                 Debug.Log($"Google 登入。");
                 SendLoginRequest(googleid);
@@ -36,6 +36,9 @@ public class LoginView : BaseView
         });
 #else
         googleid = "TestAccount";
+        PlayerPrefs.SetString(LauncherManager.Instance.LocalData_UserID, googleid);
+        PlayerPrefs.SetString(LauncherManager.Instance.LocalData_NickName, "伍鈞遠");
+        PlayerPrefs.SetString(LauncherManager.Instance.LocalData_ImgUrl, "");
         SendLoginRequest(googleid);
 #endif
     }

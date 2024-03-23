@@ -8,8 +8,12 @@ using HybridCLR;
 
 public class LauncherManager : UnitySingleton<LauncherManager>
 {
-    public string assetsPackageName { get; } = "AssetsPackage";
-    public string hotFixPackageName { get; } = "HotFixPackage";
+    public string AssetsPackageName { get; } = "AssetsPackage";
+    public string HotFixPackageName { get; } = "HotFixPackage";
+
+    public string LocalData_UserID { get; } = "GhostDraw_UserId";
+    public string LocalData_NickName { get; } = "GhostDraw_NickName";
+    public string LocalData_ImgUrl { get; } = "GhostDraw_ImgUrl";
 
     /// <summary>
     /// 補充AOT
@@ -39,7 +43,7 @@ public class LauncherManager : UnitySingleton<LauncherManager>
 
     private IEnumerator Start()
     {
-        hotFixPackage = YooAssets.GetPackage(hotFixPackageName);
+        hotFixPackage = YooAssets.GetPackage(HotFixPackageName);
 
         yield return LoadAdditionalAssemblies();
         yield return LoadHotFixDll();
@@ -108,8 +112,8 @@ public class LauncherManager : UnitySingleton<LauncherManager>
             raw.Release();
         }
 
-        YooAssets.GetPackage(assetsPackageName).UnloadUnusedAssets();
-        YooAssets.GetPackage(hotFixPackageName).UnloadUnusedAssets();
+        YooAssets.GetPackage(AssetsPackageName).UnloadUnusedAssets();
+        YooAssets.GetPackage(HotFixPackageName).UnloadUnusedAssets();
         YooAssets.Destroy();
     }
 }

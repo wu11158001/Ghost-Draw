@@ -21,7 +21,7 @@ public class YooAssetManager : UnitySingleton<YooAssetManager>
     /// <param name="callBack"></param>
     public IEnumerator GetAsset<T>(string assetName, UnityAction<T> callBack) where T : Object
     {
-        AssetHandle handle = YooAssets.GetPackage(LauncherManager.Instance.assetsPackageName).LoadAssetAsync<T>(assetName);
+        AssetHandle handle = YooAssets.GetPackage(LauncherManager.Instance.AssetsPackageName).LoadAssetAsync<T>(assetName);
 
         yield return handle;
 

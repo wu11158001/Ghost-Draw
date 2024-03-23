@@ -15,7 +15,7 @@ public class TransitionView : MonoBehaviour
         transform.SetSiblingIndex(101);
         UIManager.Instance.ClearData();
 
-        yield return YooAssets.GetPackage(LauncherManager.Instance.assetsPackageName).LoadSceneAsync(nextScene);
+        yield return YooAssets.GetPackage(LauncherManager.Instance.AssetsPackageName).LoadSceneAsync(nextScene);
 
         UIManager.Instance.SetCanvas();
         switch (nextScene)

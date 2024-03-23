@@ -12,6 +12,7 @@ public class RequestManager : UnitySingleton<RequestManager>
     }
 
     private Dictionary<ActionCode, UnityAction<MainPack>> requsetDic = new Dictionary<ActionCode, UnityAction<MainPack>>();
+    private Dictionary<ActionCode, UnityAction<MainPack>> broadcastDic = new Dictionary<ActionCode, UnityAction<MainPack>>();
 
     /// <summary>
     /// 註冊下發協議
@@ -24,6 +25,16 @@ public class RequestManager : UnitySingleton<RequestManager>
         {
             requsetDic.Add(actionCode, callback);
         }
+    }
+
+    /// <summary>
+    /// 註冊廣播事件
+    /// </summary>
+    /// <param name="actionCode"></param>
+    /// <param name="callback"></param>
+    public void RegisterBroadcast(ActionCode actionCode, UnityAction<MainPack> callback)
+    {
+        broadcastDic.Add(actionCode, callback);
     }
 
     /// <summary>
@@ -47,14 +58,35 @@ public class RequestManager : UnitySingleton<RequestManager>
     /// <param name="pack"></param>
     public void HandleResponse(MainPack pack)
     {
-        if (requsetDic.ContainsKey(pack.ActionCode))
+        if (pack.SendModeCode == SendModeCode.RoomBroadcast)
         {
-            requsetDic[pack.ActionCode](pack);
-            requsetDic.Remove(pack.ActionCode);
+            //房間廣播
+            if (broadcastDic.ContainsKey(pack.ActionCode))
+            {
+                broadcastDic[pack.ActionCode](pack);
+
+                if (requsetDic.ContainsKey(pack.ActionCode))
+                {
+                    requsetDic.Remove(pack.ActionCode);
+                }
+            }
+            else
+            {
+                Debug.LogWarning("沒有相關房間廣播協議:" + pack.ActionCode);
+            }
         }
         else
         {
-            Debug.LogWarning("沒有相關協議:" + pack.ActionCode);
+            //一般協議
+            if (requsetDic.ContainsKey(pack.ActionCode))
+            {
+                requsetDic[pack.ActionCode](pack);
+                requsetDic.Remove(pack.ActionCode);
+            }
+            else
+            {
+                Debug.LogWarning("沒有相關協議:" + pack.ActionCode);
+            }
         }
     }
 }

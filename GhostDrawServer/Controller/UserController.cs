@@ -24,6 +24,8 @@ namespace GhostDrawServer.Controller
         private void SetUserInfo(Client client, MainPack pack)
         {
             client.UserInfo.GoogleId = pack.LoginPack.Googleid;
+            client.UserInfo.NickName = pack.LoginPack.NickName;
+            client.UserInfo.ImgUrl = pack.LoginPack.ImgUrl;
         }
 
         /// <summary>
@@ -100,7 +102,7 @@ namespace GhostDrawServer.Controller
         /// <returns></returns>
         public MainPack Logout(Server server, Client client, MainPack pack)
         {
-            Console.WriteLine(client.UserInfo.GoogleId + ": 用戶登出");
+            Console.WriteLine(client.UserInfo.NickName + ": 用戶登出");
             server.RemoveClient(client);
 
             pack.ReturnCode = ReturnCode.Succeed;

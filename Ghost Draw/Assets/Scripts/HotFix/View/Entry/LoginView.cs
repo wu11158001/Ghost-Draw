@@ -13,7 +13,8 @@ public class LoginView : BaseView
     public void Start()
     {
         string googleid = "";
-
+        string nickName = "";
+        string imgUrl = "";
 #if !UNITY_EDITOR
         //Google登入
         PlayGamesPlatform.Activate();
@@ -22,12 +23,11 @@ public class LoginView : BaseView
             if (status == SignInStatus.Success)
             {
                 googleid = PlayGamesPlatform.Instance.GetUserId();
-                PlayerPrefs.SetString(LauncherManager.Instance.LocalData_UserID, googleid);
-                PlayerPrefs.SetString(LauncherManager.Instance.LocalData_NickName, PlayGamesPlatform.Instance.GetUserDisplayName());
-                PlayerPrefs.SetString(LauncherManager.Instance.LocalData_ImgUrl, PlayGamesPlatform.Instance.GetUserImageUrl());
+                nickName = PlayGamesPlatform.Instance.GetUserDisplayName();
+                imgUrl = PlayGamesPlatform.Instance.GetUserImageUrl();
 
                 Debug.Log($"Google 登入。");
-                SendLoginRequest(googleid);
+                SendLoginRequest(googleid, nickName, imgUrl);
             }
             else
             {
@@ -36,10 +36,9 @@ public class LoginView : BaseView
         });
 #else
         googleid = "TestAccount";
-        PlayerPrefs.SetString(LauncherManager.Instance.LocalData_UserID, googleid);
-        PlayerPrefs.SetString(LauncherManager.Instance.LocalData_NickName, "伍鈞遠");
-        PlayerPrefs.SetString(LauncherManager.Instance.LocalData_ImgUrl, "");
-        SendLoginRequest(googleid);
+        nickName = "伍鈞遠";
+        imgUrl = "";        
+        SendLoginRequest(googleid, nickName, imgUrl);
 #endif
     }
 
@@ -47,14 +46,20 @@ public class LoginView : BaseView
     /// 發送登入協議
     /// </summary>
     /// <param name="googleid"></param>
-    private void SendLoginRequest(string googleid)
+    private void SendLoginRequest(string googleid, string nickName, string imgUrl)
     {
+        PlayerPrefs.SetString(LauncherManager.Instance.LocalData_UserID, googleid);
+        PlayerPrefs.SetString(LauncherManager.Instance.LocalData_NickName, nickName);
+        PlayerPrefs.SetString(LauncherManager.Instance.LocalData_ImgUrl, imgUrl);
+
         MainPack pack = new MainPack();
         pack.RequestCode = RequestCode.User;
         pack.ActionCode = ActionCode.Login;
 
         LoginPack loginPack = new LoginPack();
         loginPack.Googleid = googleid;
+        loginPack.NickName = nickName;
+        loginPack.ImgUrl = imgUrl;
         pack.LoginPack = loginPack;
         SendRequest(pack);
     }

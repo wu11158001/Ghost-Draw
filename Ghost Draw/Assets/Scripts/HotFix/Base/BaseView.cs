@@ -34,4 +34,25 @@ public class BaseView : MonoBehaviour
     {
 
     }
+
+    /// <summary>
+    /// 接收廣播訊息
+    /// </summary>
+    /// <param name="pack"></param>
+    public virtual void ReciveBroadcast(MainPack pack)
+    {
+        UnityMainThreadDispatcher.Instance.Enqueue(() =>
+        {
+            HandleBroadcast(pack);
+        });
+    }
+
+    /// <summary>
+    /// 處理廣播訊息
+    /// </summary>
+    /// <param name="pack"></param>
+    public virtual void HandleBroadcast(MainPack pack)
+    {
+        
+    }
 }

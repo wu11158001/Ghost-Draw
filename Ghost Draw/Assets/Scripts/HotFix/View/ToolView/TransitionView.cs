@@ -17,15 +17,20 @@ public class TransitionView : MonoBehaviour
 
         yield return YooAssets.GetPackage(LauncherManager.Instance.AssetsPackageName).LoadSceneAsync(nextScene);
 
+        //場景啟動介面
         UIManager.Instance.SetCanvas();
         switch (nextScene)
         {
             case "Hall":
                 UIManager.Instance.OpenView<RectTransform>(ViewName.HallView);
                 break;
+                
+            case "Game":
+                UIManager.Instance.OpenView<RectTransform>(ViewName.GameView);
+                break;
         }
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.0f);
 
         gameObject.SetActive(false);
     }

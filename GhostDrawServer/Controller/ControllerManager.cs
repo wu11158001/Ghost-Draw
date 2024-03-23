@@ -20,6 +20,9 @@ namespace GhostDrawServer.Controller
 
             UserController userController = new UserController();
             controllDic.Add(userController.GetRequestCode, userController);
+
+            RoomController roomController = new RoomController();
+            controllDic.Add(roomController.GetRequestCode, roomController);
         }
 
         /// <summary>

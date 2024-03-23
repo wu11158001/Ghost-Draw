@@ -25,22 +25,34 @@ namespace GhostDrawProtobuf {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHaG9zdERyYXdQcm90b2J1Zi5wcm90bxIRR2hvc3REcmF3UHJvdG9idWYi",
-            "1gEKCE1haW5QYWNrEjMKC3JlcXVlc3RDb2RlGAEgASgOMh4uR2hvc3REcmF3",
+            "8wIKCE1haW5QYWNrEjMKC3JlcXVlc3RDb2RlGAEgASgOMh4uR2hvc3REcmF3",
             "UHJvdG9idWYuUmVxdWVzdENvZGUSMQoKYWN0aW9uQ29kZRgCIAEoDjIdLkdo",
             "b3N0RHJhd1Byb3RvYnVmLkFjdGlvbkNvZGUSMQoKcmV0dXJuQ29kZRgDIAEo",
-            "DjIdLkdob3N0RHJhd1Byb3RvYnVmLlJldHVybkNvZGUSLwoJbG9naW5QYWNr",
-            "GAQgASgLMhwuR2hvc3REcmF3UHJvdG9idWYuTG9naW5QYWNrIi8KCUxvZ2lu",
-            "UGFjaxIQCghnb29nbGVpZBgBIAEoCRIQCghuaWNrTmFtZRgCIAEoCSooCgtS",
-            "ZXF1ZXN0Q29kZRIPCgtSZXF1ZXN0Tm9uZRAAEggKBFVzZXIQASozCgpBY3Rp",
-            "b25Db2RlEg4KCkFjdGlvbk5vbmUQABIJCgVMb2dpbhABEgoKBkxvZ291dBAC",
-            "KlQKClJldHVybkNvZGUSDgoKUmV0dXJuTm9uZRAAEgsKB1N1Y2NlZWQQARII",
-            "CgRGYWlsEAISDgoKRHVwbGljYXRlZBADEg8KC1dyb25nRm9ybWF0EARiBnBy",
-            "b3RvMw=="));
+            "DjIdLkdob3N0RHJhd1Byb3RvYnVmLlJldHVybkNvZGUSNQoMc2VuZE1vZGVD",
+            "b2RlGAQgASgOMh8uR2hvc3REcmF3UHJvdG9idWYuU2VuZE1vZGVDb2RlEi8K",
+            "CWxvZ2luUGFjaxgFIAEoCzIcLkdob3N0RHJhd1Byb3RvYnVmLkxvZ2luUGFj",
+            "axI1Cgx1c2VySW5mb1BhY2sYBiADKAsyHy5HaG9zdERyYXdQcm90b2J1Zi5V",
+            "c2VySW5mb1BhY2sSLQoIcm9vbVBhY2sYByADKAsyGy5HaG9zdERyYXdQcm90",
+            "b2J1Zi5Sb29tUGFjayI/CglMb2dpblBhY2sSEAoIZ29vZ2xlaWQYASABKAkS",
+            "EAoIbmlja05hbWUYAiABKAkSDgoGaW1nVXJsGAMgASgJIjAKDFVzZXJJbmZv",
+            "UGFjaxIQCghuaWNrTmFtZRgBIAEoCRIOCgZpbWdVcmwYAiABKAkiTwoIUm9v",
+            "bVBhY2sSLwoJcm9vbVN0YXRlGAEgASgOMhwuR2hvc3REcmF3UHJvdG9idWYu",
+            "Um9vbVN0YXRlEhIKCmN1cnJQZW9wbGUYAiABKAUqPAoLUmVxdWVzdENvZGUS",
+            "DwoLUmVxdWVzdE5vbmUQABIICgRVc2VyEAESCAoEUm9vbRACEggKBEdhbWUQ",
+            "AypaCgpBY3Rpb25Db2RlEg4KCkFjdGlvbk5vbmUQABIJCgVMb2dpbhABEgoK",
+            "BkxvZ291dBACEggKBFBhaXIQAxINCglTdGFydEdhbWUQBBIMCghFeGl0Um9v",
+            "bRAFKlQKClJldHVybkNvZGUSDgoKUmV0dXJuTm9uZRAAEgsKB1N1Y2NlZWQQ",
+            "ARIICgRGYWlsEAISDgoKRHVwbGljYXRlZBADEg8KC1dyb25nRm9ybWF0EAQq",
+            "LwoMU2VuZE1vZGVDb2RlEgwKCE1vZGVOb25lEAASEQoNUm9vbUJyb2FkY2Fz",
+            "dBABKiUKCVJvb21TdGF0ZRIICgRXYWl0EAASDgoKSW5Qcm9ncmVzcxABYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::GhostDrawProtobuf.RequestCode), typeof(global::GhostDrawProtobuf.ActionCode), typeof(global::GhostDrawProtobuf.ReturnCode), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.MainPack), global::GhostDrawProtobuf.MainPack.Parser, new[]{ "RequestCode", "ActionCode", "ReturnCode", "LoginPack" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.LoginPack), global::GhostDrawProtobuf.LoginPack.Parser, new[]{ "Googleid", "NickName" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::GhostDrawProtobuf.RequestCode), typeof(global::GhostDrawProtobuf.ActionCode), typeof(global::GhostDrawProtobuf.ReturnCode), typeof(global::GhostDrawProtobuf.SendModeCode), typeof(global::GhostDrawProtobuf.RoomState), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.MainPack), global::GhostDrawProtobuf.MainPack.Parser, new[]{ "RequestCode", "ActionCode", "ReturnCode", "SendModeCode", "LoginPack", "UserInfoPack", "RoomPack" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.LoginPack), global::GhostDrawProtobuf.LoginPack.Parser, new[]{ "Googleid", "NickName", "ImgUrl" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.UserInfoPack), global::GhostDrawProtobuf.UserInfoPack.Parser, new[]{ "NickName", "ImgUrl" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.RoomPack), global::GhostDrawProtobuf.RoomPack.Parser, new[]{ "RoomState", "CurrPeople" }, null, null, null, null)
           }));
     }
     #endregion
@@ -53,6 +65,14 @@ namespace GhostDrawProtobuf {
     ///用戶
     /// </summary>
     [pbr::OriginalName("User")] User = 1,
+    /// <summary>
+    ///房間
+    /// </summary>
+    [pbr::OriginalName("Room")] Room = 2,
+    /// <summary>
+    ///遊戲
+    /// </summary>
+    [pbr::OriginalName("Game")] Game = 3,
   }
 
   /// <summary>
@@ -68,6 +88,18 @@ namespace GhostDrawProtobuf {
     ///登出
     /// </summary>
     [pbr::OriginalName("Logout")] Logout = 2,
+    /// <summary>
+    ///配對
+    /// </summary>
+    [pbr::OriginalName("Pair")] Pair = 3,
+    /// <summary>
+    ///遊戲開始
+    /// </summary>
+    [pbr::OriginalName("StartGame")] StartGame = 4,
+    /// <summary>
+    ///離開房間
+    /// </summary>
+    [pbr::OriginalName("ExitRoom")] ExitRoom = 5,
   }
 
   public enum ReturnCode {
@@ -88,6 +120,31 @@ namespace GhostDrawProtobuf {
     ///格式錯誤
     /// </summary>
     [pbr::OriginalName("WrongFormat")] WrongFormat = 4,
+  }
+
+  /// <summary>
+  ///發送模式
+  /// </summary>
+  public enum SendModeCode {
+    [pbr::OriginalName("ModeNone")] ModeNone = 0,
+    /// <summary>
+    ///房間廣播
+    /// </summary>
+    [pbr::OriginalName("RoomBroadcast")] RoomBroadcast = 1,
+  }
+
+  /// <summary>
+  ///房間狀態
+  /// </summary>
+  public enum RoomState {
+    /// <summary>
+    ///等待
+    /// </summary>
+    [pbr::OriginalName("Wait")] Wait = 0,
+    /// <summary>
+    ///進行中
+    /// </summary>
+    [pbr::OriginalName("InProgress")] InProgress = 1,
   }
 
   #endregion
@@ -121,7 +178,10 @@ namespace GhostDrawProtobuf {
       requestCode_ = other.requestCode_;
       actionCode_ = other.actionCode_;
       returnCode_ = other.returnCode_;
+      sendModeCode_ = other.sendModeCode_;
       loginPack_ = other.loginPack_ != null ? other.loginPack_.Clone() : null;
+      userInfoPack_ = other.userInfoPack_.Clone();
+      roomPack_ = other.roomPack_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -163,8 +223,19 @@ namespace GhostDrawProtobuf {
       }
     }
 
+    /// <summary>Field number for the "sendModeCode" field.</summary>
+    public const int SendModeCodeFieldNumber = 4;
+    private global::GhostDrawProtobuf.SendModeCode sendModeCode_ = global::GhostDrawProtobuf.SendModeCode.ModeNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::GhostDrawProtobuf.SendModeCode SendModeCode {
+      get { return sendModeCode_; }
+      set {
+        sendModeCode_ = value;
+      }
+    }
+
     /// <summary>Field number for the "loginPack" field.</summary>
-    public const int LoginPackFieldNumber = 4;
+    public const int LoginPackFieldNumber = 5;
     private global::GhostDrawProtobuf.LoginPack loginPack_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::GhostDrawProtobuf.LoginPack LoginPack {
@@ -172,6 +243,26 @@ namespace GhostDrawProtobuf {
       set {
         loginPack_ = value;
       }
+    }
+
+    /// <summary>Field number for the "userInfoPack" field.</summary>
+    public const int UserInfoPackFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::GhostDrawProtobuf.UserInfoPack> _repeated_userInfoPack_codec
+        = pb::FieldCodec.ForMessage(50, global::GhostDrawProtobuf.UserInfoPack.Parser);
+    private readonly pbc::RepeatedField<global::GhostDrawProtobuf.UserInfoPack> userInfoPack_ = new pbc::RepeatedField<global::GhostDrawProtobuf.UserInfoPack>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::GhostDrawProtobuf.UserInfoPack> UserInfoPack {
+      get { return userInfoPack_; }
+    }
+
+    /// <summary>Field number for the "roomPack" field.</summary>
+    public const int RoomPackFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::GhostDrawProtobuf.RoomPack> _repeated_roomPack_codec
+        = pb::FieldCodec.ForMessage(58, global::GhostDrawProtobuf.RoomPack.Parser);
+    private readonly pbc::RepeatedField<global::GhostDrawProtobuf.RoomPack> roomPack_ = new pbc::RepeatedField<global::GhostDrawProtobuf.RoomPack>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::GhostDrawProtobuf.RoomPack> RoomPack {
+      get { return roomPack_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -190,7 +281,10 @@ namespace GhostDrawProtobuf {
       if (RequestCode != other.RequestCode) return false;
       if (ActionCode != other.ActionCode) return false;
       if (ReturnCode != other.ReturnCode) return false;
+      if (SendModeCode != other.SendModeCode) return false;
       if (!object.Equals(LoginPack, other.LoginPack)) return false;
+      if(!userInfoPack_.Equals(other.userInfoPack_)) return false;
+      if(!roomPack_.Equals(other.roomPack_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -200,7 +294,10 @@ namespace GhostDrawProtobuf {
       if (RequestCode != global::GhostDrawProtobuf.RequestCode.RequestNone) hash ^= RequestCode.GetHashCode();
       if (ActionCode != global::GhostDrawProtobuf.ActionCode.ActionNone) hash ^= ActionCode.GetHashCode();
       if (ReturnCode != global::GhostDrawProtobuf.ReturnCode.ReturnNone) hash ^= ReturnCode.GetHashCode();
+      if (SendModeCode != global::GhostDrawProtobuf.SendModeCode.ModeNone) hash ^= SendModeCode.GetHashCode();
       if (loginPack_ != null) hash ^= LoginPack.GetHashCode();
+      hash ^= userInfoPack_.GetHashCode();
+      hash ^= roomPack_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -226,10 +323,16 @@ namespace GhostDrawProtobuf {
         output.WriteRawTag(24);
         output.WriteEnum((int) ReturnCode);
       }
+      if (SendModeCode != global::GhostDrawProtobuf.SendModeCode.ModeNone) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) SendModeCode);
+      }
       if (loginPack_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteMessage(LoginPack);
       }
+      userInfoPack_.WriteTo(output, _repeated_userInfoPack_codec);
+      roomPack_.WriteTo(output, _repeated_roomPack_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -247,9 +350,14 @@ namespace GhostDrawProtobuf {
       if (ReturnCode != global::GhostDrawProtobuf.ReturnCode.ReturnNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReturnCode);
       }
+      if (SendModeCode != global::GhostDrawProtobuf.SendModeCode.ModeNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SendModeCode);
+      }
       if (loginPack_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LoginPack);
       }
+      size += userInfoPack_.CalculateSize(_repeated_userInfoPack_codec);
+      size += roomPack_.CalculateSize(_repeated_roomPack_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -270,12 +378,17 @@ namespace GhostDrawProtobuf {
       if (other.ReturnCode != global::GhostDrawProtobuf.ReturnCode.ReturnNone) {
         ReturnCode = other.ReturnCode;
       }
+      if (other.SendModeCode != global::GhostDrawProtobuf.SendModeCode.ModeNone) {
+        SendModeCode = other.SendModeCode;
+      }
       if (other.loginPack_ != null) {
         if (loginPack_ == null) {
           LoginPack = new global::GhostDrawProtobuf.LoginPack();
         }
         LoginPack.MergeFrom(other.LoginPack);
       }
+      userInfoPack_.Add(other.userInfoPack_);
+      roomPack_.Add(other.roomPack_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -299,11 +412,23 @@ namespace GhostDrawProtobuf {
             ReturnCode = (global::GhostDrawProtobuf.ReturnCode) input.ReadEnum();
             break;
           }
-          case 34: {
+          case 32: {
+            SendModeCode = (global::GhostDrawProtobuf.SendModeCode) input.ReadEnum();
+            break;
+          }
+          case 42: {
             if (loginPack_ == null) {
               LoginPack = new global::GhostDrawProtobuf.LoginPack();
             }
             input.ReadMessage(LoginPack);
+            break;
+          }
+          case 50: {
+            userInfoPack_.AddEntriesFrom(input, _repeated_userInfoPack_codec);
+            break;
+          }
+          case 58: {
+            roomPack_.AddEntriesFrom(input, _repeated_roomPack_codec);
             break;
           }
         }
@@ -342,6 +467,7 @@ namespace GhostDrawProtobuf {
     public LoginPack(LoginPack other) : this() {
       googleid_ = other.googleid_;
       nickName_ = other.nickName_;
+      imgUrl_ = other.imgUrl_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -378,6 +504,20 @@ namespace GhostDrawProtobuf {
       }
     }
 
+    /// <summary>Field number for the "imgUrl" field.</summary>
+    public const int ImgUrlFieldNumber = 3;
+    private string imgUrl_ = "";
+    /// <summary>
+    ///頭像Url
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ImgUrl {
+      get { return imgUrl_; }
+      set {
+        imgUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LoginPack);
@@ -393,6 +533,7 @@ namespace GhostDrawProtobuf {
       }
       if (Googleid != other.Googleid) return false;
       if (NickName != other.NickName) return false;
+      if (ImgUrl != other.ImgUrl) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -401,6 +542,7 @@ namespace GhostDrawProtobuf {
       int hash = 1;
       if (Googleid.Length != 0) hash ^= Googleid.GetHashCode();
       if (NickName.Length != 0) hash ^= NickName.GetHashCode();
+      if (ImgUrl.Length != 0) hash ^= ImgUrl.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -422,6 +564,10 @@ namespace GhostDrawProtobuf {
         output.WriteRawTag(18);
         output.WriteString(NickName);
       }
+      if (ImgUrl.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ImgUrl);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -435,6 +581,9 @@ namespace GhostDrawProtobuf {
       }
       if (NickName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NickName);
+      }
+      if (ImgUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImgUrl);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -453,6 +602,9 @@ namespace GhostDrawProtobuf {
       if (other.NickName.Length != 0) {
         NickName = other.NickName;
       }
+      if (other.ImgUrl.Length != 0) {
+        ImgUrl = other.ImgUrl;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -470,6 +622,342 @@ namespace GhostDrawProtobuf {
           }
           case 18: {
             NickName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ImgUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///用戶訊息包
+  /// </summary>
+  public sealed partial class UserInfoPack : pb::IMessage<UserInfoPack> {
+    private static readonly pb::MessageParser<UserInfoPack> _parser = new pb::MessageParser<UserInfoPack>(() => new UserInfoPack());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UserInfoPack> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GhostDrawProtobuf.GhostDrawProtobufReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserInfoPack() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserInfoPack(UserInfoPack other) : this() {
+      nickName_ = other.nickName_;
+      imgUrl_ = other.imgUrl_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserInfoPack Clone() {
+      return new UserInfoPack(this);
+    }
+
+    /// <summary>Field number for the "nickName" field.</summary>
+    public const int NickNameFieldNumber = 1;
+    private string nickName_ = "";
+    /// <summary>
+    ///暱稱
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NickName {
+      get { return nickName_; }
+      set {
+        nickName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "imgUrl" field.</summary>
+    public const int ImgUrlFieldNumber = 2;
+    private string imgUrl_ = "";
+    /// <summary>
+    ///頭像Url
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ImgUrl {
+      get { return imgUrl_; }
+      set {
+        imgUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UserInfoPack);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UserInfoPack other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NickName != other.NickName) return false;
+      if (ImgUrl != other.ImgUrl) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NickName.Length != 0) hash ^= NickName.GetHashCode();
+      if (ImgUrl.Length != 0) hash ^= ImgUrl.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (NickName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NickName);
+      }
+      if (ImgUrl.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ImgUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (NickName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NickName);
+      }
+      if (ImgUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImgUrl);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UserInfoPack other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NickName.Length != 0) {
+        NickName = other.NickName;
+      }
+      if (other.ImgUrl.Length != 0) {
+        ImgUrl = other.ImgUrl;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NickName = input.ReadString();
+            break;
+          }
+          case 18: {
+            ImgUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///房間包
+  /// </summary>
+  public sealed partial class RoomPack : pb::IMessage<RoomPack> {
+    private static readonly pb::MessageParser<RoomPack> _parser = new pb::MessageParser<RoomPack>(() => new RoomPack());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RoomPack> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GhostDrawProtobuf.GhostDrawProtobufReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RoomPack() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RoomPack(RoomPack other) : this() {
+      roomState_ = other.roomState_;
+      currPeople_ = other.currPeople_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RoomPack Clone() {
+      return new RoomPack(this);
+    }
+
+    /// <summary>Field number for the "roomState" field.</summary>
+    public const int RoomStateFieldNumber = 1;
+    private global::GhostDrawProtobuf.RoomState roomState_ = global::GhostDrawProtobuf.RoomState.Wait;
+    /// <summary>
+    ///房間狀態
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::GhostDrawProtobuf.RoomState RoomState {
+      get { return roomState_; }
+      set {
+        roomState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "currPeople" field.</summary>
+    public const int CurrPeopleFieldNumber = 2;
+    private int currPeople_;
+    /// <summary>
+    ///房間人數
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CurrPeople {
+      get { return currPeople_; }
+      set {
+        currPeople_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RoomPack);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RoomPack other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomState != other.RoomState) return false;
+      if (CurrPeople != other.CurrPeople) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomState != global::GhostDrawProtobuf.RoomState.Wait) hash ^= RoomState.GetHashCode();
+      if (CurrPeople != 0) hash ^= CurrPeople.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomState != global::GhostDrawProtobuf.RoomState.Wait) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) RoomState);
+      }
+      if (CurrPeople != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(CurrPeople);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomState != global::GhostDrawProtobuf.RoomState.Wait) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RoomState);
+      }
+      if (CurrPeople != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CurrPeople);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RoomPack other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomState != global::GhostDrawProtobuf.RoomState.Wait) {
+        RoomState = other.RoomState;
+      }
+      if (other.CurrPeople != 0) {
+        CurrPeople = other.CurrPeople;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomState = (global::GhostDrawProtobuf.RoomState) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            CurrPeople = input.ReadInt32();
             break;
           }
         }

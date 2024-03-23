@@ -25,10 +25,13 @@ namespace GhostDrawServer.Servers
         private MySqlManager mySqlManager;
         public MySqlManager GetMySql { get { return mySqlManager; } }
 
+        public Room CurrRoom { get; set; }
+
         public class UserInfoData
         {
             public string GoogleId { get; set; }            //Google帳號ID
-            public string Cash { get; set; }                //金幣
+            public string NickName { get; set; }            //暱稱
+            public string ImgUrl { get; set; }              //頭像Url
         }
         public UserInfoData UserInfo { get; set; }
 
@@ -91,7 +94,7 @@ namespace GhostDrawServer.Servers
         /// <param name="pack"></param>
         public void Send(MainPack pack)
         {
-            Console.WriteLine($"給 {this.UserInfo.GoogleId}: 發送消息:{pack.ActionCode}");
+            Console.WriteLine($"給 {this.UserInfo.NickName}: 發送消息:{pack.ActionCode}");
 
             socket.Send(Message.PackData(pack));
         }
@@ -112,7 +115,7 @@ namespace GhostDrawServer.Servers
             server.RemoveClient(this);
             socket.Close();
             mySqlConnection.Close();
-            Console.WriteLine(this.UserInfo.GoogleId + ": 已斷開連接");
+            Console.WriteLine(this.UserInfo.NickName + ": 已斷開連接");
         }
     }
 }

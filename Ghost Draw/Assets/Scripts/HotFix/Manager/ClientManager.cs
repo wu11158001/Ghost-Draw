@@ -13,15 +13,11 @@ public class ClientManager : UnitySingleton<ClientManager>
     private Socket socket = null;
     private Message message = null;
 
-    private Canvas canvas;
-
     public override void Awake()
     {
         base.Awake();
 
         message = new Message();
-
-        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
     }
 
     private void Start()
@@ -43,7 +39,7 @@ public class ClientManager : UnitySingleton<ClientManager>
             StartReceive();
 
             //開始登入
-            
+            UIManager.Instance.OpenView<RectTransform>(ViewName.LoginView);
         }
         catch (Exception e)
         {

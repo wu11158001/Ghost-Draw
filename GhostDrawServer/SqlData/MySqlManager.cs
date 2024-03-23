@@ -9,6 +9,8 @@ namespace GhostDrawServer.SqlData
 {
     class MySqlManager
     {
+        private readonly string sqlName = "ghostdraw";
+
         /// <summary>
         /// 檢測資料
         /// </summary>
@@ -58,7 +60,7 @@ namespace GhostDrawServer.SqlData
         public bool InsertData(MySqlConnection mySqlConnection, string tableName, string[] inserNames, string[] values)
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"INSERT INTO bowling.{tableName} ({inserNames[0]}");
+            sb.Append($"INSERT INTO {sqlName}.{tableName} ({inserNames[0]}");
             for (int i = 1; i < inserNames.Length; i++)
             {
                 sb.Append($",{inserNames[i]}");

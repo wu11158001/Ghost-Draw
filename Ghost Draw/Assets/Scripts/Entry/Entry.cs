@@ -12,7 +12,7 @@ public class Entry : MonoBehaviour
     private static Entry _instance;
     public static Entry Instance { get { return _instance; } }
 
-    private const string remotePath = "http://192.168.1.172:8080/Solitaire/";
+    private const string remotePath = "http://192.168.1.172:8080/GhostDraw/";
     private const string assetsPackageName = "AssetsPackage";
     private const string hotFixPackageName = "HotFixPackage";
 

@@ -8,8 +8,8 @@ using HybridCLR;
 
 public class LauncherManager : UnitySingleton<LauncherManager>
 {
-    private const string assetsPackageName = "AssetsPackage";
-    private const string hotFixPackageName = "HotFixPackage";
+    public string assetsPackageName { get; } = "AssetsPackage";
+    public string hotFixPackageName { get; } = "HotFixPackage";
 
     /// <summary>
     /// 補充AOT
@@ -25,7 +25,6 @@ public class LauncherManager : UnitySingleton<LauncherManager>
     private static List<string> HotFixDllName { get; } = new List<string>()
     {
         "Assembly-CSharp.dll",
-        "HotFixDefinition.dll",
     };
 
     private ResourcePackage hotFixPackage;
@@ -48,7 +47,11 @@ public class LauncherManager : UnitySingleton<LauncherManager>
         Debug.Log("熱更新完成。");
 
         //啟動腳本
-        gameObject.AddComponent(GetAssemblyType("HotFixDefinition.dll", "UIManager"));
+        gameObject.AddComponent<ClientManager>();
+        gameObject.AddComponent<RequestManager>();
+        gameObject.AddComponent<UnityMainThreadDispatcher>();
+        gameObject.AddComponent<UIManager>();
+        gameObject.AddComponent<YooAssetManager>();
     }
 
     /// <summary>
@@ -83,7 +86,7 @@ public class LauncherManager : UnitySingleton<LauncherManager>
             var ass = Assembly.Load(assemblyData);
 
             assmblyList.Add(dllName, ass);
-            Debug.Log($"熱更Dll:{dllName}");
+            Debug.Log($"已載入熱更Dll:{dllName}");
         }
     }
 

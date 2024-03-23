@@ -2,6 +2,8 @@
 <linker>
   <assembly fullname="Assembly-CSharp" preserve="all">
   </assembly>
+  <assembly fullname="HotFixDefinition" preserve="all">
+  </assembly>
   <assembly fullname="mscorlib" preserve="all">
     <type fullname="System.Runtime.CompilerServices.AsyncVoidMethodBuilder" preserve="all"/>
   </assembly>
@@ -15,5 +17,6 @@
     <type fullname="UnityEngine.SphereCollider" preserve="all"/>
     <type fullname="UnityEngine.Event.UnityAction" preserve="all"/>
     <type fullname="UnityEngine.Event.EventSystems" preserve="all"/>
+    <type fullname="UnityEngine.WaitForSeconds" preserve="all"/>
   </assembly>
 </linker>

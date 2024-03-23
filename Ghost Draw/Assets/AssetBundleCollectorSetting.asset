@@ -18,7 +18,7 @@ MonoBehaviour:
   Packages:
   - PackageName: AssetsPackage
     PackageDesc: "(\u8CC7\u6E90\u5305)"
-    EnableAddressable: 0
+    EnableAddressable: 1
     LocationToLower: 0
     IncludeAssetGUID: 0
     IgnoreDefaultType: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
         UserData: 
   - PackageName: HotFixPackage
     PackageDesc: "\u71B1\u66F4\u5305"
-    EnableAddressable: 0
+    EnableAddressable: 1
     LocationToLower: 0
     IncludeAssetGUID: 0
     IgnoreDefaultType: 1
@@ -105,8 +105,16 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/Scripts/HotFix
-        CollectorGUID: b0d71b8d6bbb6ba4f827f551fcabe09c
+      - CollectPath: Assets/HotFixAssets/HotFix
+        CollectorGUID: 9d4fae34e8487db49979c4e0b0ebadfc
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackRawFile
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/HotFixAssets/AOT
+        CollectorGUID: 7edd14179ce747c4699dd35dfea6eb2c
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackRawFile

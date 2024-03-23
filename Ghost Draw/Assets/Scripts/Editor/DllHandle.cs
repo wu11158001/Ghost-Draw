@@ -26,7 +26,7 @@ public class DllHandle : MonoBehaviour
         
         foreach (var dll in dllList)
         {
-            string sourceFilePath = $"E:/MyUnityProject/Solitaire Fild/Solitaire/HybridCLRData/HotUpdateDlls/Android/{dll}";
+            string sourceFilePath = $"E:/MyUnityProject/Ghost Draw Fild/Ghost Draw/HybridCLRData/HotUpdateDlls/Android/{dll}";
             
             string targetFilePath = Path.Combine(targetFolderPath, dll);
 

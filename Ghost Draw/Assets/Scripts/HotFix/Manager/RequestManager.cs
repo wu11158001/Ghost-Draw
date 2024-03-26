@@ -15,6 +15,15 @@ public class RequestManager : UnitySingleton<RequestManager>
     private Dictionary<ActionCode, UnityAction<MainPack>> broadcastDic = new Dictionary<ActionCode, UnityAction<MainPack>>();
 
     /// <summary>
+    /// 清除協議紀錄
+    /// </summary>
+    public void ClearRequestDic()
+    {
+        requsetDic.Clear();
+        broadcastDic.Clear();
+    }
+
+    /// <summary>
     /// 註冊下發協議
     /// </summary>
     /// <param name="actionCode"></param>
@@ -72,7 +81,7 @@ public class RequestManager : UnitySingleton<RequestManager>
             }
             else
             {
-                Debug.LogWarning("沒有相關房間廣播協議:" + pack.ActionCode);
+                Debug.LogError("沒有相關房間廣播協議:" + pack.ActionCode);
             }
         }
         else

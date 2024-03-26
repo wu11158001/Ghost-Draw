@@ -82,7 +82,7 @@ public class LoginView : BaseView
             if (pack.ReturnCode == ReturnCode.Succeed)
             {
                 Debug.Log("登入成功。");
-                UIManager.Instance.Transition("Hall");
+                UIManager.Instance.OpenTransitionView("Hall");
             }
             else if (pack.ReturnCode == ReturnCode.Fail)
             {

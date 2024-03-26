@@ -7,6 +7,9 @@
   <assembly fullname="mscorlib" preserve="all">
     <type fullname="System.Runtime.CompilerServices.AsyncVoidMethodBuilder" preserve="all"/>
   </assembly>
+  <assembly fullname="System.Core">
+    <type fullname="System.Linq.Enumerable" preserve="all"/>
+  </assembly>
   <assembly fullname="UnityEngine">
     <type fullname="UnityEngine.MeshCollider" preserve="all"/>
     <type fullname="UnityEngine.Renderer" preserve="all"/>

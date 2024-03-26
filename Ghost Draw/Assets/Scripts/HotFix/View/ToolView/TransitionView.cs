@@ -13,7 +13,9 @@ public class TransitionView : MonoBehaviour
     public IEnumerator ITransition(string nextScene)
     {
         transform.SetSiblingIndex(101);
+
         UIManager.Instance.ClearData();
+        RequestManager.Instance.ClearRequestDic();
 
         yield return YooAssets.GetPackage(LauncherManager.Instance.AssetsPackageName).LoadSceneAsync(nextScene);
 
@@ -30,7 +32,7 @@ public class TransitionView : MonoBehaviour
                 break;
         }
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.5f);
 
         gameObject.SetActive(false);
     }

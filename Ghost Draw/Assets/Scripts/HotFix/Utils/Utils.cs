@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Threading.Tasks;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Utils
 {
@@ -34,5 +36,47 @@ public class Utils
         }
 
         return sprite;
+    }
+
+    //觸碰的UI
+    private static GraphicRaycaster graphicRaycaster;
+    private static EventSystem eventSystem;
+    private static PointerEventData eventData;
+    /// <summary>
+    /// 觸碰的UI物件
+    /// </summary>
+    /// <returns></returns>
+    public static GameObject TouchUIName()
+    {
+        try
+        {
+            eventData.pressPosition = Input.mousePosition;
+            eventData.position = Input.mousePosition;
+            List<RaycastResult> list = new List<RaycastResult>();
+            graphicRaycaster.Raycast(eventData, list);
+            foreach (var temp in list)
+            {
+                if (temp.gameObject.layer.Equals(5))
+                {
+                    return temp.gameObject;
+                }
+            }
+            return null;
+        }
+        catch (System.Exception)
+        {
+            graphicRaycaster = GameObject.Find("Canvas").GetComponent<GraphicRaycaster>();
+            eventSystem = EventSystem.current;
+            eventData = new PointerEventData(eventSystem);
+            if (graphicRaycaster == null)
+            {
+                Debug.Log("未有GraphicRaycaster");
+                throw;
+            }
+            else
+            {
+                return TouchUIName();
+            }
+        }
     }
 }

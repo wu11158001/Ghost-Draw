@@ -25,7 +25,7 @@ namespace GhostDrawProtobuf {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHaG9zdERyYXdQcm90b2J1Zi5wcm90bxIRR2hvc3REcmF3UHJvdG9idWYi",
-            "8wIKCE1haW5QYWNrEjMKC3JlcXVlc3RDb2RlGAEgASgOMh4uR2hvc3REcmF3",
+            "ogMKCE1haW5QYWNrEjMKC3JlcXVlc3RDb2RlGAEgASgOMh4uR2hvc3REcmF3",
             "UHJvdG9idWYuUmVxdWVzdENvZGUSMQoKYWN0aW9uQ29kZRgCIAEoDjIdLkdo",
             "b3N0RHJhd1Byb3RvYnVmLkFjdGlvbkNvZGUSMQoKcmV0dXJuQ29kZRgDIAEo",
             "DjIdLkdob3N0RHJhd1Byb3RvYnVmLlJldHVybkNvZGUSNQoMc2VuZE1vZGVD",
@@ -33,15 +33,25 @@ namespace GhostDrawProtobuf {
             "CWxvZ2luUGFjaxgFIAEoCzIcLkdob3N0RHJhd1Byb3RvYnVmLkxvZ2luUGFj",
             "axI1Cgx1c2VySW5mb1BhY2sYBiADKAsyHy5HaG9zdERyYXdQcm90b2J1Zi5V",
             "c2VySW5mb1BhY2sSLQoIcm9vbVBhY2sYByADKAsyGy5HaG9zdERyYXdQcm90",
-            "b2J1Zi5Sb29tUGFjayI/CglMb2dpblBhY2sSEAoIZ29vZ2xlaWQYASABKAkS",
-            "EAoIbmlja05hbWUYAiABKAkSDgoGaW1nVXJsGAMgASgJIjAKDFVzZXJJbmZv",
-            "UGFjaxIQCghuaWNrTmFtZRgBIAEoCRIOCgZpbWdVcmwYAiABKAkiTwoIUm9v",
-            "bVBhY2sSLwoJcm9vbVN0YXRlGAEgASgOMhwuR2hvc3REcmF3UHJvdG9idWYu",
-            "Um9vbVN0YXRlEhIKCmN1cnJQZW9wbGUYAiABKAUqPAoLUmVxdWVzdENvZGUS",
-            "DwoLUmVxdWVzdE5vbmUQABIICgRVc2VyEAESCAoEUm9vbRACEggKBEdhbWUQ",
-            "AypaCgpBY3Rpb25Db2RlEg4KCkFjdGlvbk5vbmUQABIJCgVMb2dpbhABEgoK",
-            "BkxvZ291dBACEggKBFBhaXIQAxINCglTdGFydEdhbWUQBBIMCghFeGl0Um9v",
-            "bRAFKlQKClJldHVybkNvZGUSDgoKUmV0dXJuTm9uZRAAEgsKB1N1Y2NlZWQQ",
+            "b2J1Zi5Sb29tUGFjaxItCghnYW1lUGFjaxgIIAEoCzIbLkdob3N0RHJhd1By",
+            "b3RvYnVmLkdhbWVQYWNrIj8KCUxvZ2luUGFjaxIQCghnb29nbGVpZBgBIAEo",
+            "CRIQCghuaWNrTmFtZRgCIAEoCRIOCgZpbWdVcmwYAyABKAkiPwoMVXNlcklu",
+            "Zm9QYWNrEi8KCWxvZ2luUGFjaxgBIAEoCzIcLkdob3N0RHJhd1Byb3RvYnVm",
+            "LkxvZ2luUGFjayJPCghSb29tUGFjaxIvCglyb29tU3RhdGUYASABKA4yHC5H",
+            "aG9zdERyYXdQcm90b2J1Zi5Sb29tU3RhdGUSEgoKY3VyclBlb3BsZRgCIAEo",
+            "BSLqAQoIR2FtZVBhY2sSOwoIcG9rZXJEaWMYASADKAsyKS5HaG9zdERyYXdQ",
+            "cm90b2J1Zi5HYW1lUGFjay5Qb2tlckRpY0VudHJ5EhkKEXNlbGVjdFBvY2tl",
+            "ckluZGV4GAIgASgFEhEKCWRyYXdQb2tlchgDIAEoBRIUCgxhY3Rpb25Vc2Vy",
+            "SWQYBCABKAkSEAoId2lubmVySWQYBSABKAkaSwoNUG9rZXJEaWNFbnRyeRIL",
+            "CgNrZXkYASABKAkSKQoFdmFsdWUYAiABKAsyGi5HaG9zdERyYXdQcm90b2J1",
+            "Zi5JbnRMaXN0OgI4ASIZCgdJbnRMaXN0Eg4KBnZhbHVlcxgBIAMoBSo8CgtS",
+            "ZXF1ZXN0Q29kZRIPCgtSZXF1ZXN0Tm9uZRAAEggKBFVzZXIQARIICgRSb29t",
+            "EAISCAoER2FtZRADKtUBCgpBY3Rpb25Db2RlEg4KCkFjdGlvbk5vbmUQABIJ",
+            "CgVMb2dpbhABEgoKBkxvZ291dBACEggKBFBhaXIQAxINCglTdGFydEdhbWUQ",
+            "BBIMCghFeGl0Um9vbRAFEgsKB1JlYWR5T0sQBhIQCgxJbml0R2FtZUluZm8Q",
+            "BxIOCgpIYW5kUG9rZXJzEAgSCwoHU2h1ZmZsZRAJEg8KC1NlbGVjdFBva2Vy",
+            "EAoSDAoIRHJhd0NhcmQQCxIOCgpBY3Rpb25Vc2VyEAwSDgoKR2FtZVJlc3Vs",
+            "dBANKlQKClJldHVybkNvZGUSDgoKUmV0dXJuTm9uZRAAEgsKB1N1Y2NlZWQQ",
             "ARIICgRGYWlsEAISDgoKRHVwbGljYXRlZBADEg8KC1dyb25nRm9ybWF0EAQq",
             "LwoMU2VuZE1vZGVDb2RlEgwKCE1vZGVOb25lEAASEQoNUm9vbUJyb2FkY2Fz",
             "dBABKiUKCVJvb21TdGF0ZRIICgRXYWl0EAASDgoKSW5Qcm9ncmVzcxABYgZw",
@@ -49,10 +59,12 @@ namespace GhostDrawProtobuf {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::GhostDrawProtobuf.RequestCode), typeof(global::GhostDrawProtobuf.ActionCode), typeof(global::GhostDrawProtobuf.ReturnCode), typeof(global::GhostDrawProtobuf.SendModeCode), typeof(global::GhostDrawProtobuf.RoomState), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.MainPack), global::GhostDrawProtobuf.MainPack.Parser, new[]{ "RequestCode", "ActionCode", "ReturnCode", "SendModeCode", "LoginPack", "UserInfoPack", "RoomPack" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.MainPack), global::GhostDrawProtobuf.MainPack.Parser, new[]{ "RequestCode", "ActionCode", "ReturnCode", "SendModeCode", "LoginPack", "UserInfoPack", "RoomPack", "GamePack" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.LoginPack), global::GhostDrawProtobuf.LoginPack.Parser, new[]{ "Googleid", "NickName", "ImgUrl" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.UserInfoPack), global::GhostDrawProtobuf.UserInfoPack.Parser, new[]{ "NickName", "ImgUrl" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.RoomPack), global::GhostDrawProtobuf.RoomPack.Parser, new[]{ "RoomState", "CurrPeople" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.UserInfoPack), global::GhostDrawProtobuf.UserInfoPack.Parser, new[]{ "LoginPack" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.RoomPack), global::GhostDrawProtobuf.RoomPack.Parser, new[]{ "RoomState", "CurrPeople" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.GamePack), global::GhostDrawProtobuf.GamePack.Parser, new[]{ "PokerDic", "SelectPockerIndex", "DrawPoker", "ActionUserId", "WinnerId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GhostDrawProtobuf.IntList), global::GhostDrawProtobuf.IntList.Parser, new[]{ "Values" }, null, null, null, null)
           }));
     }
     #endregion
@@ -100,6 +112,38 @@ namespace GhostDrawProtobuf {
     ///離開房間
     /// </summary>
     [pbr::OriginalName("ExitRoom")] ExitRoom = 5,
+    /// <summary>
+    ///遊戲準備完成
+    /// </summary>
+    [pbr::OriginalName("ReadyOK")] ReadyOk = 6,
+    /// <summary>
+    ///遊戲初始訊息(用戶訊息，手牌)
+    /// </summary>
+    [pbr::OriginalName("InitGameInfo")] InitGameInfo = 7,
+    /// <summary>
+    ///所有玩家手牌
+    /// </summary>
+    [pbr::OriginalName("HandPokers")] HandPokers = 8,
+    /// <summary>
+    ///洗牌
+    /// </summary>
+    [pbr::OriginalName("Shuffle")] Shuffle = 9,
+    /// <summary>
+    ///選牌
+    /// </summary>
+    [pbr::OriginalName("SelectPoker")] SelectPoker = 10,
+    /// <summary>
+    ///抽牌
+    /// </summary>
+    [pbr::OriginalName("DrawCard")] DrawCard = 11,
+    /// <summary>
+    ///行動玩家
+    /// </summary>
+    [pbr::OriginalName("ActionUser")] ActionUser = 12,
+    /// <summary>
+    ///遊戲結果
+    /// </summary>
+    [pbr::OriginalName("GameResult")] GameResult = 13,
   }
 
   public enum ReturnCode {
@@ -182,6 +226,7 @@ namespace GhostDrawProtobuf {
       loginPack_ = other.loginPack_ != null ? other.loginPack_.Clone() : null;
       userInfoPack_ = other.userInfoPack_.Clone();
       roomPack_ = other.roomPack_.Clone();
+      gamePack_ = other.gamePack_ != null ? other.gamePack_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -265,6 +310,17 @@ namespace GhostDrawProtobuf {
       get { return roomPack_; }
     }
 
+    /// <summary>Field number for the "gamePack" field.</summary>
+    public const int GamePackFieldNumber = 8;
+    private global::GhostDrawProtobuf.GamePack gamePack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::GhostDrawProtobuf.GamePack GamePack {
+      get { return gamePack_; }
+      set {
+        gamePack_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MainPack);
@@ -285,6 +341,7 @@ namespace GhostDrawProtobuf {
       if (!object.Equals(LoginPack, other.LoginPack)) return false;
       if(!userInfoPack_.Equals(other.userInfoPack_)) return false;
       if(!roomPack_.Equals(other.roomPack_)) return false;
+      if (!object.Equals(GamePack, other.GamePack)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -298,6 +355,7 @@ namespace GhostDrawProtobuf {
       if (loginPack_ != null) hash ^= LoginPack.GetHashCode();
       hash ^= userInfoPack_.GetHashCode();
       hash ^= roomPack_.GetHashCode();
+      if (gamePack_ != null) hash ^= GamePack.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -333,6 +391,10 @@ namespace GhostDrawProtobuf {
       }
       userInfoPack_.WriteTo(output, _repeated_userInfoPack_codec);
       roomPack_.WriteTo(output, _repeated_roomPack_codec);
+      if (gamePack_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(GamePack);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -358,6 +420,9 @@ namespace GhostDrawProtobuf {
       }
       size += userInfoPack_.CalculateSize(_repeated_userInfoPack_codec);
       size += roomPack_.CalculateSize(_repeated_roomPack_codec);
+      if (gamePack_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GamePack);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -389,6 +454,12 @@ namespace GhostDrawProtobuf {
       }
       userInfoPack_.Add(other.userInfoPack_);
       roomPack_.Add(other.roomPack_);
+      if (other.gamePack_ != null) {
+        if (gamePack_ == null) {
+          GamePack = new global::GhostDrawProtobuf.GamePack();
+        }
+        GamePack.MergeFrom(other.GamePack);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -429,6 +500,13 @@ namespace GhostDrawProtobuf {
           }
           case 58: {
             roomPack_.AddEntriesFrom(input, _repeated_roomPack_codec);
+            break;
+          }
+          case 66: {
+            if (gamePack_ == null) {
+              GamePack = new global::GhostDrawProtobuf.GamePack();
+            }
+            input.ReadMessage(GamePack);
             break;
           }
         }
@@ -662,8 +740,7 @@ namespace GhostDrawProtobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UserInfoPack(UserInfoPack other) : this() {
-      nickName_ = other.nickName_;
-      imgUrl_ = other.imgUrl_;
+      loginPack_ = other.loginPack_ != null ? other.loginPack_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -672,31 +749,14 @@ namespace GhostDrawProtobuf {
       return new UserInfoPack(this);
     }
 
-    /// <summary>Field number for the "nickName" field.</summary>
-    public const int NickNameFieldNumber = 1;
-    private string nickName_ = "";
-    /// <summary>
-    ///暱稱
-    /// </summary>
+    /// <summary>Field number for the "loginPack" field.</summary>
+    public const int LoginPackFieldNumber = 1;
+    private global::GhostDrawProtobuf.LoginPack loginPack_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string NickName {
-      get { return nickName_; }
+    public global::GhostDrawProtobuf.LoginPack LoginPack {
+      get { return loginPack_; }
       set {
-        nickName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "imgUrl" field.</summary>
-    public const int ImgUrlFieldNumber = 2;
-    private string imgUrl_ = "";
-    /// <summary>
-    ///頭像Url
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ImgUrl {
-      get { return imgUrl_; }
-      set {
-        imgUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        loginPack_ = value;
       }
     }
 
@@ -713,16 +773,14 @@ namespace GhostDrawProtobuf {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NickName != other.NickName) return false;
-      if (ImgUrl != other.ImgUrl) return false;
+      if (!object.Equals(LoginPack, other.LoginPack)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (NickName.Length != 0) hash ^= NickName.GetHashCode();
-      if (ImgUrl.Length != 0) hash ^= ImgUrl.GetHashCode();
+      if (loginPack_ != null) hash ^= LoginPack.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -736,13 +794,9 @@ namespace GhostDrawProtobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (NickName.Length != 0) {
+      if (loginPack_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(NickName);
-      }
-      if (ImgUrl.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ImgUrl);
+        output.WriteMessage(LoginPack);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -752,11 +806,8 @@ namespace GhostDrawProtobuf {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (NickName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NickName);
-      }
-      if (ImgUrl.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImgUrl);
+      if (loginPack_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LoginPack);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -769,11 +820,11 @@ namespace GhostDrawProtobuf {
       if (other == null) {
         return;
       }
-      if (other.NickName.Length != 0) {
-        NickName = other.NickName;
-      }
-      if (other.ImgUrl.Length != 0) {
-        ImgUrl = other.ImgUrl;
+      if (other.loginPack_ != null) {
+        if (loginPack_ == null) {
+          LoginPack = new global::GhostDrawProtobuf.LoginPack();
+        }
+        LoginPack.MergeFrom(other.LoginPack);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -787,11 +838,10 @@ namespace GhostDrawProtobuf {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            NickName = input.ReadString();
-            break;
-          }
-          case 18: {
-            ImgUrl = input.ReadString();
+            if (loginPack_ == null) {
+              LoginPack = new global::GhostDrawProtobuf.LoginPack();
+            }
+            input.ReadMessage(LoginPack);
             break;
           }
         }
@@ -958,6 +1008,382 @@ namespace GhostDrawProtobuf {
           }
           case 16: {
             CurrPeople = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///遊戲內容包
+  /// </summary>
+  public sealed partial class GamePack : pb::IMessage<GamePack> {
+    private static readonly pb::MessageParser<GamePack> _parser = new pb::MessageParser<GamePack>(() => new GamePack());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GamePack> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GhostDrawProtobuf.GhostDrawProtobufReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GamePack() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GamePack(GamePack other) : this() {
+      pokerDic_ = other.pokerDic_.Clone();
+      selectPockerIndex_ = other.selectPockerIndex_;
+      drawPoker_ = other.drawPoker_;
+      actionUserId_ = other.actionUserId_;
+      winnerId_ = other.winnerId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GamePack Clone() {
+      return new GamePack(this);
+    }
+
+    /// <summary>Field number for the "pokerDic" field.</summary>
+    public const int PokerDicFieldNumber = 1;
+    private static readonly pbc::MapField<string, global::GhostDrawProtobuf.IntList>.Codec _map_pokerDic_codec
+        = new pbc::MapField<string, global::GhostDrawProtobuf.IntList>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::GhostDrawProtobuf.IntList.Parser), 10);
+    private readonly pbc::MapField<string, global::GhostDrawProtobuf.IntList> pokerDic_ = new pbc::MapField<string, global::GhostDrawProtobuf.IntList>();
+    /// <summary>
+    ///所有玩家手牌(id, 手牌)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, global::GhostDrawProtobuf.IntList> PokerDic {
+      get { return pokerDic_; }
+    }
+
+    /// <summary>Field number for the "selectPockerIndex" field.</summary>
+    public const int SelectPockerIndexFieldNumber = 2;
+    private int selectPockerIndex_;
+    /// <summary>
+    ///對手選擇的撲克
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SelectPockerIndex {
+      get { return selectPockerIndex_; }
+      set {
+        selectPockerIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "drawPoker" field.</summary>
+    public const int DrawPokerFieldNumber = 3;
+    private int drawPoker_;
+    /// <summary>
+    ///抽中的牌
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DrawPoker {
+      get { return drawPoker_; }
+      set {
+        drawPoker_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "actionUserId" field.</summary>
+    public const int ActionUserIdFieldNumber = 4;
+    private string actionUserId_ = "";
+    /// <summary>
+    ///行動玩家ID
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ActionUserId {
+      get { return actionUserId_; }
+      set {
+        actionUserId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "winnerId" field.</summary>
+    public const int WinnerIdFieldNumber = 5;
+    private string winnerId_ = "";
+    /// <summary>
+    ///贏家ID
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string WinnerId {
+      get { return winnerId_; }
+      set {
+        winnerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GamePack);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GamePack other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!PokerDic.Equals(other.PokerDic)) return false;
+      if (SelectPockerIndex != other.SelectPockerIndex) return false;
+      if (DrawPoker != other.DrawPoker) return false;
+      if (ActionUserId != other.ActionUserId) return false;
+      if (WinnerId != other.WinnerId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= PokerDic.GetHashCode();
+      if (SelectPockerIndex != 0) hash ^= SelectPockerIndex.GetHashCode();
+      if (DrawPoker != 0) hash ^= DrawPoker.GetHashCode();
+      if (ActionUserId.Length != 0) hash ^= ActionUserId.GetHashCode();
+      if (WinnerId.Length != 0) hash ^= WinnerId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      pokerDic_.WriteTo(output, _map_pokerDic_codec);
+      if (SelectPockerIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SelectPockerIndex);
+      }
+      if (DrawPoker != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(DrawPoker);
+      }
+      if (ActionUserId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ActionUserId);
+      }
+      if (WinnerId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(WinnerId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += pokerDic_.CalculateSize(_map_pokerDic_codec);
+      if (SelectPockerIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SelectPockerIndex);
+      }
+      if (DrawPoker != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DrawPoker);
+      }
+      if (ActionUserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ActionUserId);
+      }
+      if (WinnerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WinnerId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GamePack other) {
+      if (other == null) {
+        return;
+      }
+      pokerDic_.Add(other.pokerDic_);
+      if (other.SelectPockerIndex != 0) {
+        SelectPockerIndex = other.SelectPockerIndex;
+      }
+      if (other.DrawPoker != 0) {
+        DrawPoker = other.DrawPoker;
+      }
+      if (other.ActionUserId.Length != 0) {
+        ActionUserId = other.ActionUserId;
+      }
+      if (other.WinnerId.Length != 0) {
+        WinnerId = other.WinnerId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            pokerDic_.AddEntriesFrom(input, _map_pokerDic_codec);
+            break;
+          }
+          case 16: {
+            SelectPockerIndex = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            DrawPoker = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            ActionUserId = input.ReadString();
+            break;
+          }
+          case 42: {
+            WinnerId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///工具類
+  /// </summary>
+  public sealed partial class IntList : pb::IMessage<IntList> {
+    private static readonly pb::MessageParser<IntList> _parser = new pb::MessageParser<IntList>(() => new IntList());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IntList> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GhostDrawProtobuf.GhostDrawProtobufReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IntList() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IntList(IntList other) : this() {
+      values_ = other.values_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IntList Clone() {
+      return new IntList(this);
+    }
+
+    /// <summary>Field number for the "values" field.</summary>
+    public const int ValuesFieldNumber = 1;
+    private static readonly pb::FieldCodec<int> _repeated_values_codec
+        = pb::FieldCodec.ForInt32(10);
+    private readonly pbc::RepeatedField<int> values_ = new pbc::RepeatedField<int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<int> Values {
+      get { return values_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IntList);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IntList other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!values_.Equals(other.values_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= values_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      values_.WriteTo(output, _repeated_values_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += values_.CalculateSize(_repeated_values_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IntList other) {
+      if (other == null) {
+        return;
+      }
+      values_.Add(other.values_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10:
+          case 8: {
+            values_.AddEntriesFrom(input, _repeated_values_codec);
             break;
           }
         }

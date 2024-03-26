@@ -20,7 +20,7 @@ public class LauncherManager : UnitySingleton<LauncherManager>
     /// </summary>
     private static List<string> additionalAOT { get; } = new List<string>()
     {
-
+        
     };
 
     /// <summary>

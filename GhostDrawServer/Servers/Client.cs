@@ -32,6 +32,9 @@ namespace GhostDrawServer.Servers
             public string GoogleId { get; set; }            //Google帳號ID
             public string NickName { get; set; }            //暱稱
             public string ImgUrl { get; set; }              //頭像Url
+
+            public bool readyState { get; set; }            //遊戲準備狀態
+            public List<int> poker { get; set; }            //手牌
         }
         public UserInfoData UserInfo { get; set; }
 
@@ -112,6 +115,11 @@ namespace GhostDrawServer.Servers
         /// </summary>
         void Close()
         {
+            if (CurrRoom != null)
+            {
+                CurrRoom.Exit(server, this);
+            }
+
             server.RemoveClient(this);
             socket.Close();
             mySqlConnection.Close();

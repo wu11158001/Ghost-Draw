@@ -67,7 +67,7 @@ public class HallView : BaseView
         //計時器
         if (timing_Rt.gameObject.activeSelf)
         {
-            if (timing_Rt.anchoredPosition.y > 0)
+            if (timing_Rt.anchoredPosition.y > -100)
             {
                 timing_Rt.Translate(new Vector3(0, -500 * Time.deltaTime, 0), Space.Self);
             }
@@ -75,21 +75,6 @@ public class HallView : BaseView
             TimeSpan timing = DateTime.Now - startPairTime;
             timing_Txt.text = $"{(int)timing.TotalMinutes} : {timing.Seconds:00}";
         }
-    }
-
-    public override void SendRequest(MainPack pack)
-    {
-        base.SendRequest(pack);
-    }
-
-    public override void ReciveRequest(MainPack pack)
-    {
-        base.ReciveRequest(pack);
-    }
-
-    public override void HandleRequest(MainPack pack)
-    {
-        
     }
 
     public override void ReciveBroadcast(MainPack pack)
@@ -102,8 +87,8 @@ public class HallView : BaseView
         switch (pack.ActionCode)
         {
             case ActionCode.StartGame:
-                Debug.Log("遊戲開始");
-                UIManager.Instance.Transition("Game");
+                Debug.Log("配對成功，遊戲開始。");
+                UIManager.Instance.OpenTransitionView("Game");
                 break;
 
             case ActionCode.ExitRoom:

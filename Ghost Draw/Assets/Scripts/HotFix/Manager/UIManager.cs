@@ -59,11 +59,31 @@ public class UIManager : UnitySingleton<UIManager>
     /// 轉場
     /// </summary>
     /// <param name="nextScene"></param>
-    public void Transition(string nextScene)
+    public void OpenTransitionView(string nextScene)
     {
         OpenToolView<TransitionView>(ViewName.TransitionView, (transitionView) =>
         {
             StartCoroutine(transitionView.ITransition(nextScene));
+        });
+    }
+
+    /// <summary>
+    /// 開啟提示
+    /// </summary>
+    /// <param name="content">內容</param>
+    /// <param name="confirmCallBack">確認回傳</param>
+    /// <param name="confirmStr">確認按鈕文字</param>
+    /// <param name="isCancel">是否有取消按鈕</param>
+    /// <param name="cancelCallBack">取消回傳</param>
+    public void OpenTipView(string content, UnityAction confirmCallBack = null, string confirmStr = "確認", bool isCancel = false, UnityAction cancelCallBack = null)
+    {
+        OpenToolView<TipView>(ViewName.TipView, (TipView) =>
+        {
+            TipView.SetTip(content,
+                           confirmCallBack,
+                           confirmStr,
+                           isCancel,
+                           cancelCallBack);
         });
     }
 
@@ -86,10 +106,11 @@ public class UIManager : UnitySingleton<UIManager>
         }
         else
         {
-            yield return YooAssetManager.Instance.GetAsset<GameObject>(viewName.ToString(), (viewAsset) =>
+            yield return YooAssetManager.Instance.IGetAsset<GameObject>(viewName.ToString(), (viewAsset) =>
             {
                 view = Instantiate(viewAsset).GetComponent<RectTransform>();
                 view.SetParent(toolCanvas);
+                view.transform.SetSiblingIndex(101);
                 InitView(view);
                 toolDic.Add(viewName, view);
             });
@@ -123,7 +144,7 @@ public class UIManager : UnitySingleton<UIManager>
         }
         else
         {
-            yield return YooAssetManager.Instance.GetAsset<GameObject>(viewName.ToString(), (asset) =>
+            yield return YooAssetManager.Instance.IGetAsset<GameObject>(viewName.ToString(), (asset) =>
             {
                 view = Instantiate(asset).GetComponent<RectTransform>();
                 view.SetParent(canvas);

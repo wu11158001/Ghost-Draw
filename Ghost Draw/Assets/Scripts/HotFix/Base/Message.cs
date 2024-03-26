@@ -5,7 +5,7 @@ using GhostDrawProtobuf;
 using Google.Protobuf;
 using System;
 
-public class Message : MonoBehaviour
+public class Message
 {
     private byte[] buffer = new byte[1024];
     public byte[] GetBuffer { get { return buffer; } }

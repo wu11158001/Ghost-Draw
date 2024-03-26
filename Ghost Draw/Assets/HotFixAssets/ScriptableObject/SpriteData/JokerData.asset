@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e05944638835c1842883ec478154a2b1, type: 3}
-  m_Name: BackData
+  m_Name: JokerData
   m_EditorClassIdentifier: 
   sprites:
     spritesList:
-    - {fileID: 21300000, guid: c759744cd12bb614186452c113794f15, type: 3}
+    - {fileID: 21300000, guid: 0723749152e6cdd4895e230a491530dc, type: 3}

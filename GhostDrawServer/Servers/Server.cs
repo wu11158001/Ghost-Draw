@@ -88,8 +88,7 @@ namespace GhostDrawServer.Servers
                 {                  
                     //配對成功                    
                     r.GetRoomInfo.RoomState = RoomState.InProgress;
-                    r.Join(client);
-                    Console.WriteLine($"{client.UserInfo.NickName}:加入房間，遊戲開始。");
+                    r.Join(client);                 
                     return;
                 }
             }

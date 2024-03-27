@@ -88,6 +88,7 @@ public class HallView : BaseView
         {
             case ActionCode.StartGame:
                 Debug.Log("配對成功，遊戲開始。");
+                timing_Rt.gameObject.SetActive(false);
                 UIManager.Instance.OpenTransitionView("Game");
                 break;
 

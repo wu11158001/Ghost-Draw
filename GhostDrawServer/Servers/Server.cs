@@ -82,6 +82,8 @@ namespace GhostDrawServer.Servers
         /// <returns></returns>
         public void Pair(Client client, MainPack pack)
         {
+            client.UserInfo.readyState = false;
+
             foreach (Room r in roomList)
             {
                 if (r.GetRoomInfo.CurrPeople < 2 && r.GetRoomInfo.RoomState == RoomState.Wait)

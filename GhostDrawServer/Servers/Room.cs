@@ -92,11 +92,8 @@ namespace GhostDrawServer.Servers
                 return;
             }
 
-            client.CurrRoom = null;
-
             MainPack pack = new MainPack();
             pack.ActionCode = ActionCode.ExitRoom;
-            pack.SendModeCode = SendModeCode.RoomBroadcast;
 
             Broadcast(client, pack);
         }

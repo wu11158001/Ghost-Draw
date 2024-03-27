@@ -98,11 +98,6 @@ public class GameView : BaseView
         //退出
         exit_Btn.onClick.AddListener(() =>
         {
-            MainPack pack = new MainPack();
-            pack.RequestCode = RequestCode.Room;
-            pack.ActionCode = ActionCode.ExitRoom;
-            SendRequest(pack);
-
             BackHall();
         });
     }
@@ -284,9 +279,7 @@ public class GameView : BaseView
             currPoker.Add(poker.rectTransform);
 
             yield return null;
-        }
-
-        exit_Btn.gameObject.SetActive(true);
+        }  
     }
 
     /// <summary>
@@ -342,18 +335,10 @@ public class GameView : BaseView
     /// </summary>
     private void BackHall()
     {
-        for (int i = 0; i < userPokerPoint.childCount; i++)
-        {
-            Destroy(userPokerPoint.GetChild(i).gameObject);
-        }
-
-        for (int i = 0; i < matchPokerPoint.childCount; i++)
-        {
-            Destroy(matchPokerPoint.GetChild(i).gameObject);
-        }
-
-        userPokerList.Clear();
-        matchPokerList.Clear();
+        MainPack pack = new MainPack();
+        pack.RequestCode = RequestCode.Room;
+        pack.ActionCode = ActionCode.ExitRoom;
+        SendRequest(pack);
 
         UIManager.Instance.OpenTransitionView("Hall");
     }
@@ -380,6 +365,7 @@ public class GameView : BaseView
             //獲取手牌
             case ActionCode.HandPokers:
                 SetHandPokers(pack.GamePack);
+                exit_Btn.gameObject.SetActive(true);
                 break;
 
             //對手選牌

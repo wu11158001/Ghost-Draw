@@ -12,7 +12,7 @@ public class Entry : MonoBehaviour
     private static Entry _instance;
     public static Entry Instance { get { return _instance; } }
 
-    private const string remotePath = "http://192.168.1.172:8080/GhostDraw/";
+    private string remotePath;
     private const string assetsPackageName = "AssetsPackage";
     private const string hotFixPackageName = "HotFixPackage";
 
@@ -44,6 +44,12 @@ public class Entry : MonoBehaviour
         {
             _instance = this;
         }
+
+#if UNITY_EDITOR
+        remotePath = "http://127.0.0.1:8080/GhostDraw/";
+#elif UNITY_ANDROID
+        remotePath = "http://192.168.76.176:8080/GhostDraw/";
+#endif
 
         debugTool.SetActive(isShowDebug);
         tip_Obj.SetActive(false);

@@ -7,7 +7,7 @@ using GhostDrawProtobuf;
 
 public class ClientManager : UnitySingleton<ClientManager>
 {
-    private const string ip = "192.168.1.172";
+    private string ip;
     private const int port = 8888;
 
     private Socket socket = null;
@@ -16,6 +16,12 @@ public class ClientManager : UnitySingleton<ClientManager>
     public override void Awake()
     {
         base.Awake();
+
+#if UNITY_EDITOR
+        ip = "127.0.0.1";
+#elif UNITY_ANDROID
+        ip = "192.168.76.176";
+#endif
 
         message = new Message();
     }
